@@ -1,0 +1,341 @@
+
+<body>
+
+
+  <header>
+    <div class="header text-center" >
+
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        {{ page.navigation }}
+
+
+      </div>
+
+      <div id="main">
+
+        <span style="font-size:35px;color:white ; cursor:pointer ;position: fixed;
+        top: 5px;
+        left: 9px;" onclick="openNav()">&#9776; </span>
+      </div>
+
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+
+
+
+
+
+      {% if page.header %}
+        <h2 class="homepagetitle">   {{ page.page_title }} </h2>
+      {% endif %}
+
+      <p class="subheading"> {{ page.page_subheading }} </p>
+
+      <button type="button" class="btn btn-lg button1"> {{ page.header_button1 }}</button>
+
+      <button type="button" class="btn btn-lg button2" > {{ page.header_button2 }} </button>
+    </div>
+  </header>
+
+
+  <!-- second container -->
+  {% if page.content %}
+    <div id="about" class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 second1">
+          <h3>Build your base.</h3><br>
+          <p class="upper1">
+
+            {{ page.content_left }}
+          </p>
+          <br><button  class="btn btn-primary btn-lg button3 ">meet the team  <i class="glyphicon glyphicon-arrow-right" aria-hidden="true"> </i></button>
+
+        </div>
+        <div class="col-md-6">
+         {{ page.content_right }}
+       </div>
+     </div>
+
+
+   </div>
+ {% endif %}
+
+ <!-- third cpmtainer -->
+
+
+ <div id="uac1" class="container-fluid bg-3 text-center uac2">
+   <h3 class="margin"> Creative And Unique </h3><br>
+
+   <div class="row text-center ">
+    <div class="col-sm-4">
+      <div class="t1">
+        <br>
+        <br>
+        <i class="icon-graph icon1" aria-hidden="true"></i>
+        <h3 class="heading">Creativity.</h3>
+        <p> {{ page.creatvite_section1 }} </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="t1">
+
+        <br>
+        <br>
+        <i class="icon-briefcase icon1" aria-hidden="true"></i>
+
+
+        <h3 class="heading">Capacity.</h3>
+        <p> {{ page.creatvite_section2 }} </p>
+
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="t1"
+      <br>
+      <br>
+      <i class="icon-map icon1" aria-hidden="true"></i>
+
+      <h3 class="heading">Portfolios.</h3>
+
+
+      <p> {{ page.creatvite_section3 }} </p>
+    </div>
+  </div>
+
+</div><br>
+
+</div>
+<div id="t2" class="container-fluid bg-3">
+
+  <div class="row">
+    <div class="col-md-4  ">
+      <h3 class= "show">
+        {{ page.content_bottom_left }}
+        <br>
+      </h3>
+
+
+    </div>
+    <div class="col-md-8">
+
+      <p class="content">
+        {{ page.content_bottom_right }}</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- fourth container -->
+
+
+  <div  id="where" class="container-fluid bg-3 text-center ">
+    <h3  class="margin" >Awards.</h3><br>
+    <div class="row">
+      <div class="col-md-4">
+        <h3 class="a1" >Architecture</h3>
+        <div class="where">
+         {{ page.award_section1 }}
+       </div>
+     </div>
+     <div class="col-md-4">
+      <h3 class="a1">Design</h3>
+      <div class="where">
+       {{ page.award_section2 }}
+
+     </div>
+   </div>
+   <div class="col-md-4">
+    <h3 class="a1" >Management</h3>
+    <div class="where">
+     {{ page.award_section3 }}
+
+   </div>
+ </div>
+ <br>
+ <br>
+
+ <br><button  class="btn btn-primary btn-lg button4 ">meet the team  <span  src="{{ base_path ~ directory }}/img/arrow1.png" alt="Cha" >> </span></button>
+ <br>
+ <br>
+</div>
+</div>
+
+<!--fourth container  -->
+{% if page.price_block1 or page.price_block2 %}
+
+  <div id="t3" class="container-fluid bg-3">
+
+    <div class="row">
+      <div class="col-md-4  ">
+        <h3 class= "show">
+          {{ page.price_block1}}
+          <br>
+        </h3>
+
+
+
+      </div>
+      <div class="col-md-8">
+
+        <p class="content">
+          {{ page.price_block2 }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+{% endif %}
+
+{% if page.price %}
+
+
+ {{ page.price }}
+
+{% endif %}
+
+{% if page.super_creative %}
+
+  <div class="container-fluid text-center block1 ">
+
+    <h2>Be the best at what you do.</h2><br>
+    <p>
+      {{ page.super_creative }}
+
+    </p>
+    <img class= "hidden-sm hidden-xs hidden-md"  src="{{ base_path ~ directory }}/img/arrowdown.png" alt="New" >
+
+
+  </div>
+{% endif %}
+
+<!-- features container -->
+
+
+
+<div class="container-fluid con quality">
+
+ <div class="featurebox1">
+  <div class="column">
+   <div class="col-sm-3">
+    <div class="feature2">
+     {{ page.contentsecondary_bottom_left }}
+   </div>
+
+
+ </div>
+</div>
+</div>
+<div class="col-sm-9 featurebox">
+ {{ page.contentsecondary_bottom_right}}
+</div>
+
+</div>
+
+<!super creative container-->
+
+
+
+
+{% if page.super_creative %}
+
+
+ <div id="super" class="container-fluid bg-2 text-center">
+   <div class="col-sm-4">
+    <br>
+
+    <img src="{{ base_path ~ directory }}/img/p4.jpg" class="img-circle" alt="Cinque Terre" width="236" height="236">
+
+
+
+  </div>
+  <div class="col-sm-8 super0">
+    <h3 class="margin1">Super Creative </h3>
+    <br>
+    <p class="text-left mar" style="text-align:left;">
+     {{ page.super_creative }}
+   </p>
+   <br>
+   <p class="text-left margin2 "><strong>Rohit Sharma </strong>
+     <br>  New Delhi </p>
+   </div >
+ </div>
+{% endif %}
+
+<!-- portfolio container -->
+{% if page.portfolio %}
+
+ {{ page.portfolio }}
+{% endif %}
+
+<!-- team member -->
+{% if page.team %}
+
+  {{ page.meet_team }}
+{% endif %}
+
+
+<hr>
+
+{% if page.department %}
+
+  {{ page.department }}
+{% endif %}
+
+</div>
+
+<!-- footer -->
+{% if page.footer1 or page.footer2 or page.footer3 or page.footer4 %}
+
+  <footer>
+    <div  id="contact" class="container-fluid bg-2">
+      <div class="footer container-fluid">
+        <div class="col-sm-3 contact">
+
+          {{ page.footer1 }}
+        </div>
+        <div class="col-sm-3 contact">
+
+          {{ page.footer2 }}
+        </div>
+
+        <div class="col-sm-3 contact">
+
+         {{ page.footer3 }}
+       </div>
+       <div class="col-sm-3 contact">
+
+         {{ page.footer4 }} <span>
+         <i class="fa fa-facebook-official" aria-hidden="true"></i>
+         <i class="fa fa-google-plus-official" aria-hidden="true"></i>
+         <i class="fa fa-twitter" aria-hidden="true"></i>
+         <i class="fa fa-pinterest" aria-hidden="true"></i>
+
+       </span>
+     </div>
+   </div>
+ </div>
+
+</footer>
+{% endif %}
+
+
+
+
+
+
+
+
+</body>
+</html>

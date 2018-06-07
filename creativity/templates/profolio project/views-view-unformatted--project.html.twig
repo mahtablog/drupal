@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+  {# <div id="portfolio" class="container-fluid "> 
+  <div class="container-fluid text-center">
+    <div class="about_top">
+      <h2>Portfolio</h2><br>
+      <p>THE ONE is a high-quality solution for those who want a beautiful website in no time.<br> It's fully responsive and will adapt itself to any mobile device. iPad, iPhone, Android,<br> it doesn't matter. 
+      </p>
+    </div>
+   </div> 
+ <div class="container-fluid">
+
+        
+        <div class="column">
+         <div class="row text-center slideanim">
+ #}
+ {#  <div class="container">
+
+
+        <div class="column">
+         <div class="row text-center slideanim"> #}
+   <div id="portfolio" class="container-fluid "> 
+  <div class="container-fluid text-center">
+    <div class="abouttop3">
+      <h2>Portfolio</h2><br>
+      <p>THE ONE is a high-quality solution for those who want a beautiful website in no time.<br> It's fully responsive and will adapt itself to any mobile device. iPad, iPhone, Android,<br> it doesn't matter. 
+      </p>
+    </div>
+   </div> 
+ <div class="container-fluid">
+
+        
+        <div class="column">
+         <div class="row text-center slideanim">
+
+{% if title %}
+
+    
+
+  <h3>{{ title }}</h3>
+{% endif %}
+{% for row in rows %}
+  {%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+ <div {{ row.attributes.addClass(row_classes) }}>
+    {{ row.content }}
+    
+ </div>
+  {# <div class="panel-footer">
+          <button class="btn btn-lg">Sign Up</button>
+        </div> #} 
+  {% endfor %}
+
+
+   </div>
+   </div>
+   </div>
+   </div>
+ 
+
+ 
+
+
+
+
+

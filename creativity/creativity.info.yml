@@ -1,0 +1,60 @@
+name: creativity
+# core: 8.x
+type: theme
+base theme: bootstrap
+
+description: 'Creativity is a free responsive and fully customizable Drupal 8 theme whose Base theme is bootstrap. It is a generic theme and is best suited for businesses ,portfolio &  magazine sites. Moreover, it can be used as a base theme to give your own theme a very specific business profile look.'
+screenshot: screenshot.png
+libraries:
+  - creativity/global-styling
+
+regions:
+  navigation: 'Navigation'
+  header: 'Top Bar'
+  page_title: 'HomePage Title'
+  page_subheading: 'HomePage Subheading'
+  header_button1: 'Header button first'
+  header_button2: 'Header button second'
+  content_left: 'Content left'
+  content_right: 'Content Right'
+  creatvite_section1: 'creative  box 1'
+  creatvite_section2: 'creative box 2'
+  creatvite_section3: 'creative box 3'
+  content_bottom_left: 'Left Content Bottom'
+  content_bottom_right: 'Right Content Bottom'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  top_left: 'Top Navigation Left'
+  top_right: 'Top Navigation Right'
+  branding: 'Site Branding'
+  banner: 'Banner'
+  award_section1: 'Award Section 1'
+  award_section2: 'Award Section 2'
+  award_section3: 'Award Section 3'
+  where: 'where'
+  unique: 'unique'
+  unique_img: 'image'
+  price_block1: 'price block 1'
+  price_block2: 'price block 2'
+  price: 'pricing'
+  bcb: 'about bcb'
+  contentsecondary_bottom_left: 'Content Secondary left'
+  contentsecondary_bottom_right: 'Content Secondary right'
+  super_creative: 'super creative'
+  portfolio: 'portfolio'
+  meet_team: 'meet the team'
+  users: 'users'
+  department: 'department'
+  footer1: 'Footer Column 1'
+  footer2: 'Footer Column 2'
+  footer3: 'Footer Column 3'
+  footer4: 'Footer Column 4'
+
+# Information added by Drupal.org packaging script on 2018-03-25
+version: '8.x-1.1'
+core: '8.x'
+project: 'creativity'
+datestamp: 1521996486

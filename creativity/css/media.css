@@ -1,0 +1,167 @@
+@media (max-width: 767px) {
+  .header h2 {
+    font-size: 65px;
+    margin: 12px;
+  }
+  .row {
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  .staff {
+    padding: 18px 0px 18px 0px;
+  }
+  .btn {
+    margin: 8px;
+  }
+  .header.btn {
+    margin: 10px;
+  }
+  .second1 {
+    padding: 50px 20px 40px 20px;
+  }
+  .feature1 {
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+  #about {
+    padding: 17px;
+  }
+  .button5 {
+    padding: 0px 6px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    line-height: 32px;
+  }
+  .abouttop3 > h2 {
+    font-size: 52px;
+  }
+  .pricing  > h1 {
+    text-align: center;
+    font-size: 35px;
+  }
+  .show {
+    margin-left: 0px
+    font-size: 25px;
+    margin-left: 25px !important
+  }
+  .button3 {
+    line-height: 35px;
+    padding: 0 26px;
+  }
+  .button1 {
+    padding: 10px 10px 10px 12px;
+    font-size: 11px;
+  }
+  .button2 {
+    padding: 6px 7px 6px 7px;
+    font-size: 11px;
+  }
+  img {
+    width: 175px;
+  }
+  .header p
+  line-height: 21px;
+}
+#pricing {
+  padding: 15px 0px 70px 0px;
+}
+#where {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+#t2 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+#uac1 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.margin {
+  font-size: 37px;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .header h2 {
+    font-size: 85px;
+    margin: 0px;
+  }
+  .col-sm-3 {
+    width: 100%;
+  }
+  .header.btn {
+    margin: 12px;
+  }
+  .button5 {
+    font-size: 9px;
+    padding: 3 10px;
+  }
+  .pricing > h1 {
+    font-size: 25px;
+  }
+  img {
+    width: 235px;
+    height: 240px !important;
+    padding-bottom: 20px;
+  }
+  .mar {
+    padding-left: 34px;
+  }
+  .margin2 {
+    padding-left: 31px;
+  }
+  .col-sm-2 {
+    width: 100.666667%;
+  }
+  .col-sm-9 {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header .btn {
+    margin: 12px;
+  }
+  .button5 {
+    font-size: 9px;
+    padding: 3 10px;
+  }
+  .col-sm-3 {
+    width: 100%;
+  }
+  .mar {
+    padding-left: 34px;
+  }
+  .margin1 {
+    padding-left: 25px;
+  }
+  .margin2 {
+    padding-left: 31px;
+  }
+  img {
+    width: 235px;
+    height: 250px;
+    padding-bottom: 20px;
+  }
+  .pricing > h1 {
+    font-size: 25px;
+  }
+  .col-sm-3 {
+    width: 24%;
+  }
+  .col-sm-2 {
+    width: 100.666667%;
+  }
+  .col-sm-9 {
+    width: 100%;
+  }
+  .imgc {
+    width: 400px;
+    height: 480px;
+  }
+}
+@media (min-width: 1200px) {
+  img {
+    padding-bottom: 20px;
+  }
+}
