@@ -1,0 +1,5 @@
+name: Generate PDF
+description: Provide functionality to generate pdf and save to disk
+package: Custom
+type: module
+core: 8.x

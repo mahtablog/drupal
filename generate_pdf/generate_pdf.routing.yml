@@ -1,0 +1,15 @@
+generate_pdf.save_pdf:
+  path: '/generate_pdf'
+  defaults:
+    _controller: 'Drupal\generate_pdf\Controller\GeneratePDF::getSave'
+    _title: 'PDF Generate'
+  requirements:
+    _permission: 'access content'
+
+generate_pdf.layout_form:
+ path: '/generate_pdf/myform'
+ defaults:
+   _title: 'PDF Layout Settings'
+   _form: '\Drupal\generate_pdf\Form\LayoutForm'
+ requirements:
+   _permission: 'access content'
