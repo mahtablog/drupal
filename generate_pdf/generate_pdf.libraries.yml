@@ -1,0 +1,6 @@
+layout_form:
+  js:
+    js/generate_pdf.js: {}
+  css:
+    theme:
+      css/generate_pdf.css: {}

@@ -7,7 +7,7 @@ generate_pdf.save_pdf:
     _permission: 'access content'
 
 generate_pdf.layout_form:
- path: '/generate_pdf/myform'
+ path: '/generate_pdf/create'
  defaults:
    _title: 'PDF Layout Settings'
    _form: '\Drupal\generate_pdf\Form\LayoutForm'

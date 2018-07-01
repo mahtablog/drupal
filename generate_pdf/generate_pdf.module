@@ -1,7 +1,12 @@
 <?php
-/**
-  * Implementes hook_theme();
-  */
-function generate_pdf_theme($existing, $type, $theme, $path) {
 
+/**
+ * Implements hook_theme().
+ */
+function generate_pdf_theme() {
+  $theme['create_layout'] = [
+    'render element' => 'form',
+    'template' => 'create-layout',
+  ];
+  return $theme;
 }

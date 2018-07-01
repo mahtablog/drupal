@@ -17,92 +17,92 @@ class LayoutForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-	
+
     $form['layout_name'] = array(
       '#type' => 'textfield',
       '#title' => t('Layout Name:'),
       '#required' => TRUE,
     );
 
-    $form['page_settings'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Page Settings'),
-    );
-
-    $form['page_settings']['dimenssion'] = array (
+    $form['dimenssion'] = array (
       '#type' => 'select',
       '#title' => t('Unit'),
       '#options' => array(
-        'cm' => t('cm'),
         'mm' => t('mm'),
 				'in' => t('inches'),
       ),
     );
 
-    $form['page_settings']['page_width'] = array(
+    $form['page_width'] = array(
     '#type' => 'number',
     '#title' => t('Page Width'),
     );
 
-    $form['page_settings']['page_height']= array(
+    $form['page_height']= array(
     '#type' => 'number',
     '#title' => t('Page Height'),
     );
 
-    $form['page_settings']['margin_top'] = array(
+    $form['margin_top'] = array(
     '#type' => 'number',
     '#title' => t('Margin Top'),
     );
 
-    $form['page_settings']['margin_bottom']= array(
+    $form['margin_bottom']= array(
     '#type' => 'number',
     '#title' => t('Margin Bottom'),
     );
 
-    $form['page_settings']['margin_left']= array(
+    $form['margin_left']= array(
     '#type' => 'number',
     '#title' => t('Margin Left'),
     );
 
-    $form['page_settings']['margin_right'] = array(
+    $form['margin_right'] = array(
     '#type' => 'number',
     '#title' => t('Margin Right'),
     );
-		
-    $form['pdf_layout_preview'] = array(
-      '#type' => 'fieldset',
-      '#title' => $this ->t('Layout Preview'),
+
+    $form['horizontal_gutter'] = array(
+    '#type' => 'number',
+    '#title' => t('Horizontal Gutter'),
     );
-    $form['pdf_layout_preview']['layout_preview'] = array(
+
+    $form['vertical_gutter'] = array(
+    '#type' => 'number',
+    '#title' => t('Vertical Gutter'),
+    );
+
+    $form['layout_preview'] = array(
       '#type' => 'managed_file',
       '#name' => 'layout_preview',
       '#title' => t('Layout Static Preview'),
       '#size' => 20,
-      '#description' => t('Files must be less than 1MB </br> Allowed file types png jpg jpeg'),
+      '#description' => t('Files must be less than 1MB. Allowed file types png jpg jpeg'),
 	    '#upload_validators'  => array(
 		    'file_validate_extensions' => array('png jpg jpeg'),
 		    'file_validate_size' => array(1000000),
 	    ),
       '#upload_location' => 'public://layout_preview/',
     );
-    $form['pdf_layout_preview']['cover_preview'] = array(
+    $form['cover_preview'] = array(
       '#type' => 'managed_file',
       '#name' => 'cover_preview',
-      '#title' => t('Cover Static Preview*'),
+      '#title' => t('Cover Static Preview'),
       '#size' => 20,
-      '#description' => t('Files must be less than 1MB </br> Allowed file types png jpg jpeg'),
+      '#description' => t('Files must be less than 1MB. Allowed file types png jpg jpeg'),
 	    '#upload_validators'  => array(
 		    'file_validate_extensions' => array('png jpg jpeg'),
 		    'file_validate_size' => array(1000000),
 	    ),
       '#upload_location' => 'public://cover_preview/',
     );
-    $form['pdf_layout_preview']['climax_preview'] = array(
+    $form['climax_preview'] = array(
       '#type' => 'managed_file',
       '#name' => 'climax_preview',
       '#title' => t('Climax Static Preview'),
       '#size' => 20,
-      '#description' => t('Files must be less than 1MB </br> Allowed file types png jpg jpeg'),
+      '#description' => t('Files must be less than 1MB. Allowed file types png jpg jpeg'),
 	    '#upload_validators'  => array(
 		    'file_validate_extensions' => array('png jpg jpeg'),
 		    'file_validate_size' => array(1000000),
@@ -126,6 +126,8 @@ class LayoutForm extends FormBase {
       '#value' => $this->t('Save'),
       '#button_type' => 'primary',
     );
+    $form['#attached']['library'][] = 'generate_pdf/layout_form';
+    $form['#theme'] = 'create_layout';
     return $form;
   }
   /**
