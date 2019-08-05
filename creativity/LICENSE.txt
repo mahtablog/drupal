@@ -337,3 +337,19 @@ proprietary programs.  If your program is a subroutine library, you may
 consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
+
+
+
+Durpal7 website https://ssa-airport.iurix.com/
+Mocke-up: https://marcosnascimento7.wixsite.com/siteaeroporto1
+
+1. Banner Section to reflect image sliding in backen and can be managible by admin or user with permission. Assuming the floating panel functionality is working fine.
+2. Descubra o aeroporto 
+3. Destinos which will be manageble from backend and admin can change image along with link
+4. Tudo que você precisa para planejar sua viagem
+5. Notícias e informações section along with it news detail page.
+6. Dúvidas frequentes!
+7. Entre em contato conosco
+8. Experiencias em Salvador
+9. Fique informado
+10. Multilingual configuration for site along with menu,content, block, views. So that all section will have translate feature and you can add content for respective langugae.
